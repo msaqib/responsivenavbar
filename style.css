@@ -8,57 +8,88 @@ body {
     background-color: #f0f0f9;
 }
 
-.nav-bar {
+header {
     background-color: #f1f1f1;
-    position: relative;
-}
-.nav-header {
-    height: auto;
-}
-
-.nav-header h3 {
-    float: left;
-    margin: 0.5rem;
+    padding: 1rem 2rem;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-header button {
-    float: right;
-    margin: 0.5rem;
+.navlist {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
 }
 
-.nav-bar::after {
-    position: absolute;
-    height: 2px;
-    left: 0;
-    right: 0;
-    content: "";
-    background: rgba(0, 0, 0, 0.5); 
-    filter: blur(2px); /* Blur effect */
-}
-
-.links {
-    margin: 0.5rem;
-}
-
-.links li {
+.navlist a:link, .navlist a:visited {
     display: inline-block;
-    margin-right: 10px;
-}
-
-.links-vert {
-    height: 13rem;
-    width: 10rem;
-}
-
-.links-vert a {
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-    width: 100%;
-    color: #222;
-    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: #212529;
+    text-transform: uppercase;
+    transition: all 0.5s;
 }
 
-.links-vert a:hover {
-    background-color: #fcfcfc;
+.navlist a:hover, .navlist a:active {
+    color: #888888;
+}
+
+.hero {
+    padding: 10rem;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A5D8FF;
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.mobile-navbutton {
+        display: none;
+}
+
+.hamb, hamb-close {
+    height: 3rem;
+    width: 3rem;
+}
+
+.hamb-close {
+    display: none;
+}
+
+@media screen and (max-width: 300px) {
+    .mobile-navbutton {
+        display: block;
+    }
+
+    .hamb {
+        display: block;
+    }
+
+    .hamb-close {
+        display: none;
+    }
+
+    header {
+        position: relative;
+    }
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navlist {
+        flex-direction: column;
+    }
 }
