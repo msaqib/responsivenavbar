@@ -1,0 +1,64 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f9;
+}
+
+.nav-bar {
+    background-color: #f1f1f1;
+    position: relative;
+}
+.nav-header {
+    height: auto;
+}
+
+.nav-header h3 {
+    float: left;
+    margin: 0.5rem;
+}
+
+.nav-header button {
+    float: right;
+    margin: 0.5rem;
+}
+
+.nav-bar::after {
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    content: "";
+    background: rgba(0, 0, 0, 0.5); 
+    filter: blur(2px); /* Blur effect */
+}
+
+.links {
+    margin: 0.5rem;
+}
+
+.links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.links-vert {
+    height: 13rem;
+    width: 10rem;
+}
+
+.links-vert a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    width: 100%;
+    color: #222;
+    font-family: "Roboto", sans-serif;
+}
+
+.links-vert a:hover {
+    background-color: #fcfcfc;
+}
